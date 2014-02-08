@@ -1,0 +1,32 @@
+<table class="table table-striped">
+	<tr>
+	{{#labels}}
+		<th>
+			{{item}}
+		</th>
+	{{/labels}}
+	</tr>
+	{{#itemsTable}}
+		<tr>
+			{{#linha}}
+				<td>
+					{{item}}
+				</td>
+			{{/linha}}
+		</tr>
+	{{/itemsTable}}
+</table>
+<span class="label label-info | pull-right">Total de registros: {{itemsCurrentLength}} de {{itemsLength}}</span>
+<div class="pagination pagination-centered">
+  <ul>
+    <li class="{{firstSelected}}"><a id="firstPage" href="javascript: return false;" >&laquo;</a></li>
+    <li class="{{firstSelected}}"><a id="antPage" href="javascript: return false;" >Voltar</a></li>
+    {{#pagination}} 
+		 <li class="{{selected}}"><a id="nextPage" data-active="{{selected}}" href="javascript: return false;" data-next="{{value}}">{{value}}</a></li>
+	{{/pagination}}
+     <li class="{{lastSelected}}"><a id="proxPage"  href="javascript: return false;" >Avançar</a></li>
+     <li class="{{lastSelected}}"><a id="lastPage"  href="javascript: return false;" >&raquo;</a></li>
+  </ul>
+ </div>
+ 
+  
